@@ -1,0 +1,299 @@
+\documentclass[a4paper]{article}
+    \usepackage{fullpage}
+    \usepackage{amsmath}
+    \usepackage{amssymb}
+    \usepackage{textcomp}
+    \usepackage{fontawesome}
+    \usepackage{hyperref}
+    \usepackage[usenames, dvipsnames]{color}
+    \usepackage[utf8]{inputenc}
+    \usepackage[T1]{fontenc}
+    \textheight=12in
+    \pagestyle{empty}
+    \raggedright
+
+    %\renewcommand{\encodingdefault}{cg}
+%\renewcommand{\rmdefault}{lgrcmr}
+
+\def\bull{\vrule height 0.8ex width .7ex depth -.1ex }
+
+% DEFINITIONS FOR RESUME %%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\area} [2] {
+    \vspace*{-9pt}
+    \begin{verse}
+        \textbf{#1}   #2
+    \end{verse}
+}
+
+\newcommand{\lineunder} {
+    \vspace*{-8pt} \\
+    \hspace*{-18pt} {\color{Mahogany} \hrulefill} \\
+}
+
+\newcommand{\header} [1] {
+    \vspace{4mm}
+    {\hspace*{-18pt}\vspace*{6pt} \large \textsc{\textcolor{Mahogany}{#1}}}
+    \vspace*{-6pt} \lineunder
+}
+
+\newcommand{\employer} [3] {
+    { \textbf{#1} (#2)\\ \underline{\textbf{\emph{#3}}}\\  }
+}
+
+\newcommand{\contact} [3] {
+    \vspace*{-10pt}
+    \begin{center}
+        {\Huge \scshape {#1}}\\
+        #2 \\ #3
+    \end{center}
+    \vspace*{-8pt}
+}
+
+\newenvironment{achievements}{
+    \begin{list}
+        {$\bullet$}{\topsep 0pt \itemsep -2pt}}{\vspace*{4pt}
+    \end{list}
+}
+
+\newcommand{\schoolwithcourses} [4] {
+    \textbf{#1} #2 $\bullet$ #3\\
+    #4 \\
+    \vspace*{5pt}
+}
+
+\newcommand{\school} [4] {
+    \textbf{#1} #2 $\bullet$ #3\\
+    #4 \\
+}
+
+\newenvironment{jobdetails}%
+    {\list{}{\leftmargin=4mm}\item[]}%
+    {\endlist}
+
+% END RESUME DEFINITIONS %%%%%%%%%%%%%%%%%%%%%%%
+
+    \begin{document}
+\vspace*{-40pt}
+
+
+
+%==== Profile ====%
+\vspace*{-10pt}
+\begin{center}
+	{\Huge \scshape {Urban Škudnik}}\\
+    \vspace{2mm}
+	urban.skudnik@gmail.com\\
+    \vspace{2mm}
+    \faLinkedinSquare  $\>$ \url{https://www.linkedin.com/in/urbanskudnik} $\cdot$
+    \faGithub $\>$ \url{https://github.com/uskudnik}\\
+\end{center}
+
+%==== Education ====%
+\header{Objectives \& Values}
+Product engineer, usually found turning spreadsheets into products. Solidly full stack, but focused on backend and data engineering.
+
+\begin{itemize} \itemsep 1pt
+\item Tech lead vendor selection processes for embedded analytics, data integrations with \$10 billion+ customers, served as on-call engineer, and resolved production incidents,
+\item Provided product and management with tech optionality and budgetory calculations and optimizations. I've helped bring down operational costs of infractructure and helped aligned vendor's roadmaps with internal product requirements,
+\item I have a passion for creating solutions that have quick turn around that don't negatively impact site reliability and code quality,
+\item If it's an incident, we've failed - but let's do blameless post-mortem and update the tools and processes
+\end{itemize}
+\header{Skills}
+\begin{itemize} \itemsep 1pt
+    \item Python - Django, Flask, pandas, SQLAlchemy, mypy...
+    \item SQL - MySQL, PostgreSQL, Snowflake, SQLite
+    \item NoSQL - ElasticSearch, Mongo
+    \item Temporal
+    \item dbt, Fivetran
+    \item Docker, Heroku, fly.io, AWS, GCP
+\end{itemize}
+
+
+
+%==== Experience ====%
+\header{Experience}
+\vspace{1mm}
+
+\textbf{Crunchtime (Zenput)} \hfill December 2019 | - November 2023 \\
+\textit{Senior Software Engineer} \hfill Remote \\
+\vspace{2mm}
+
+\begin{jobdetails}
+Working on operations execution product, powering restaurant, retail and convenience store in their 
+compliance and food safety operations in over 40000 locations. 
+Help grew company's ARR from 7 figures, via growth and merger and acquirisiton, to 9 figures.
+
+Major projects \& initiatives
+
+\begin{itemize} \itemsep 1pt
+	\item Tech lead platform team developing embedded analytics platform to support self-service reporting.
+	\item Tech lead initiative to bring in Temporal for highly reliable processes.
+    \item Lead data integration initiatives with \$10+ billion customers
+    \item Started initiative to bring down test execution time from 1 hour to 5 minutes
+    \item Helped drive codebase improvements by creating automated tooling to help guide developers
+\end{itemize}
+
+
+\vspace{2mm}
+
+\textbf{\textit{Technologies}}: Python, SQL, dbt, Snowflake, Temporal, Fivetran, Sigma Computing, Django, MySQL, React, Backbone
+
+\textbf{\textit{URLs}}
+\begin{itemize} \itemsep 1pt
+	\item \url{https://zenput.com}
+	\item \url{https://crunchtime.com}
+\end{itemize}
+
+\end{jobdetails}
+\vspace{1mm}
+
+
+\pagebreak
+
+
+% ****************************************
+
+
+\textbf{ShopGypsy} \hfill January 2019 | January 2020 \\
+\textit{CTO / Lead Technical Consultant} \hfill Remote \\
+\vspace{2mm}
+
+\begin{jobdetails}
+Developed scrapers, data warehouse and supporting infrastructure for ingesting clothing offerings from
+several data providers for a stealth startup ShopGypsy. Dead.
+\vspace{2mm}
+
+\textbf{\textit{Technologies}}: Elm, Postgrest, Python, Kubernetes, Google Cloud Platform (GKE, GCE), Docker, PostgreSQL, Scrapy
+
+\end{jobdetails}
+\vspace{1mm}
+
+
+% ****************************************
+\textbf{Messari} \hfill September 2019 | January 2019 \\
+\textit{Senior Software Engineer / Consultant } \hfill Remote \\
+\vspace{2mm}
+
+\begin{jobdetails}
+Lead and develop data ingestion engine for consuming real-time crypto stock exchange information
+from Kaiko. Developed data warehouse serving historical data for development information of
+various cryptocurrency projects.
+\vspace{2mm}
+
+\textbf{\textit{Technologies}}: Go, InfluxDB, PostgreSQL, Kaiko
+
+\textbf{\textit{URLs}}
+\begin{itemize} \itemsep 1pt
+	\item \url{https://messari.io/}
+    \item \url{https://www.kaiko.com/}
+\end{itemize}
+
+\end{jobdetails}
+\vspace{1mm}
+
+
+% ****************************************
+\textbf{Octane AI} \hfill July 2017 | April 2018 \\
+\textit{Software Engineer} \hfill Remote \\
+\vspace{2mm}
+
+\begin{jobdetails}
+Worked on WYSIWYG bot creation tool for Facebook Messenger Platform.
+Developed new product features or extending
+existing ones and working with partners for integrations with external
+services (e.g. Yext).
+
+\vspace{2mm}
+
+\textbf{\textit{Technologies}}: Python, Flask, Redis, Greenlets, JavaScript, React, AWS, Facebook API
+
+\textbf{\textit{URLs}}
+\begin{itemize} \itemsep 1pt
+	\item \url{https://octane.ai}
+    \item \url{https://yext.com}
+    \item \url{https://twitter.com/howard/status/969327079635472384}
+\end{itemize}
+
+\end{jobdetails}
+\vspace{1mm}
+
+
+% ****************************************
+
+
+\textbf{RiskOptics (Reciprocity)} \hfill February 2015 | February 2017 \\
+\textit{Software Engineer} \hfill Remote \& On-site \\
+\vspace{2mm}
+
+\begin{jobdetails}
+Working as open source contributor to Google’s GGRC project, from writing initial specifications
+with product/feature owners at Google to bringing features to final completion and production delivery.
+Previously worked on company’s closed-source fork, lead the transition from Google App Engine to AWS EC2,
+deployed and maintained customers on EC2 and implemented customer-specific features and login systems.
+\vspace{2mm}
+
+\textbf{\textit{Technologies}}: Python, SQLAlchemy, MySQL, Flask, JavaScript, CanJS, Google App Engine, Google Cloud SQL,
+AWS, Appscale
+\vspace{2mm}
+
+\textbf{\textit{URLs}}
+\begin{itemize} \itemsep 1pt
+	\item \url{https://reciprocity.com/}
+	\item \url{https://github.com/uskudnik/ggrc-core/}
+	\begin{itemize}
+        \item {\it Note: Google has since deprecated the project}
+    \end{itemize}
+\end{itemize}
+
+\end{jobdetails}
+\vspace{1mm}
+
+
+\pagebreak
+
+
+% ****************************************
+
+
+\textbf{Celtra} \hfill November 2013 | October 2014 \\
+\textit{Software Engineer} \hfill On-site \\
+\vspace{2mm}
+
+% ****************************************
+
+
+\textbf{Commission for the Prevention of Corruption of
+the Republic of Slovenia}\\
+\textit{Software Engineer} \hfill October 2011 | September 2013 \\
+\hfill Remote \& On-site \\
+\vspace{2mm}
+
+
+% ****************************************
+
+
+\textbf{Google Summer of Code – Gephi}  \hfill May 2011 | August 2011 \\
+\textit{Software Engineer} \hfill Remote \\
+\vspace{2mm}
+
+% ****************************************
+
+
+\textbf{Google Summer of Code – Deja Dup} \hfill May 2010 – August 2010\\
+\textit{Software Engineer} \hfill Remote \\
+
+% ****************************************
+
+%==== Education ====%
+\header{education}
+\textbf{Faculty of Mathematics and Physics, course Physics}\hfill 2008 - 2013\\
+\vspace{2mm}
+
+\header{Offline}
+Avid foodie and out-door person – hiker, (mountain) biker, swimmer, runner and skier and also an active member of local
+ski club and judge on local-level junior competitions.
+\vspace*{2mm}
+
+\
+\end{document}
